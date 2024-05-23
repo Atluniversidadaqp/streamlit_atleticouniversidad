@@ -13,35 +13,41 @@ st.subheader('RIVAL: SPORTIVO HURACÁN')
 
 #---------------------------
 st.subheader('Fecha 1 liguilla _ Huracán vs Cantolao')
+
+#--- LECTURA DE DATA
+df_urls = pd.read_excel(urls.xlsx)
+df_urls['nombre']=='Huracan_presion_ vs Cantolao'
+
+#VIDEOS
 #SIN BALON
 col11, col12, col13, col14= st.columns([1, 1, 1, 1])
 with col11:
     st.write('Presión')
-    st.video("Huracan_presion_ vs Cantolao.MP4")
+    st.video(df_urls[df_urls['Nombre']=='Huracan presion vs Cantolao']['url'].values[0])
 with col12:
     st.write('Ocasiones en contra')
-    st.video("Huracan_remates en contra_ vs Cantolao.MP4")
+    st.video(df_urls[df_urls['Nombre']=='Huracan remates en contra vs Cantolao']['url'].values[0])
 with col13:
     st.write('Corner en contra')
-    st.video("Huracan_corner en contra_ vs Cantolao.MP4")
+    st.video(df_urls[df_urls['Nombre']=='Huracan corner en contra vs Cantolao']['url'].values[0])
 with col14:
     st.write('Tiro libre en contra')
-    st.video("Huracan_tiro libre en contra_ vs Cantolao.MP4")
+    st.video(df_urls[df_urls['Nombre']=='Huracan tiro libre en contra vs Cantolao']['url'].values[0])
 
 #CON BALON
 col11, col12, col13, col14= st.columns([1, 1, 1, 1])
 with col11:
     st.write('Salida (saque de meta)')
-    st.video("Huracan_saque de meta_ vs Cantolao.MP4")
+    st.video(df_urls[df_urls['Nombre']=='Huracan saque de meta vs Cantolao']['url'].values[0])
 with col12:
     st.write('Remates a favor')
-    st.video("Huracan_remates a favor_ vs Cantolao.MP4")
+    st.video(df_urls[df_urls['Nombre']=='Huracan remates a favor vs Cantolao']['url'].values[0])
 with col13:
     st.write('Corner a favor')
-    st.video("Huracan_corner a favor_ vs Cantolao.MP4")
+    st.video(df_urls[df_urls['Nombre']=='Huracan corner a favor vs Cantolao']['url'].values[0])
 with col14:
     st.write('Tiro libre a favor')
-    st.video("Huracan_tiro libre a favor_ vs Cantolao.MP4")
+    st.video(df_urls[df_urls['Nombre']=='Huracan tiro libre a favor vs Cantolao']['url'].values[0])
 st.write("-------------------------------------")
 #---------------------------
 st.subheader('Fecha 2 liguilla _ Huracán vs Max Uhle')
