@@ -15,8 +15,7 @@ st.subheader('RIVAL: SPORTIVO HURACÁN')
 st.subheader('Fecha 1 liguilla _ Huracán vs Cantolao')
 
 #--- LECTURA DE DATA
-df_urls = pd.read_excel(urls.xlsx)
-df_urls['nombre']=='Huracan_presion_ vs Cantolao'
+df_urls = pd.read_excel('urls.xlsx')
 
 #VIDEOS
 #SIN BALON
